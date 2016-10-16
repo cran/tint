@@ -1,6 +1,6 @@
-## tint
+## tint [![Build Status](https://travis-ci.org/eddelbuettel/tint.svg)](https://travis-ci.org/eddelbuettel/tint) [![Package-License](http://img.shields.io/badge/license-GPL--3-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-3.0.html) [![CRAN](http://www.r-pkg.org/badges/version/tint)](https://cran.r-project.org/package=tint) [![Downloads](http://cranlogs.r-pkg.org/badges/tint?color=brightgreen)](http://www.r-pkg.org/pkg/tint)
 
-tint is not tufte
+Tint is not Tufte
 
 ### Motivation
 
@@ -31,23 +31,45 @@ A quick screenshot of the html variant is below:
 ![](http://eddelbuettel.github.com/tint/tint-region.png)
 
 and the full underlying document is [available too](http://eddelbuettel.github.com/tint/).  Its sources 
-are included in the packages as [skeleton.Rmd](https://github.com/eddelbuettel/tint/blob/master/inst/rmarkdown/templates/html/skeleton/skeleton.Rmd).
+are included in the packages as
+[skeleton.Rmd](https://github.com/eddelbuettel/tint/blob/master/inst/rmarkdown/templates/html/skeleton/skeleton.Rmd).
 
 ### Status
 
-The package is working and supports both pdf and html output.
+The package is now on [CRAN](https://cran.r-project.org/package=tint) and
+supports both pdf and html output.
 
 ### Usage 
 
-Install as a package, e.g. via
+Install from [CRAN](https://cran.r-project.org) as any other package, e.g. via
 
 ```r
-R> if (!requireNamespace("drat", quietly=TRUE)) install.packages("drat")
-R> drat::addRepo("ghrr")                 # make drat repo known
 R> install.packages("tint")
 ```
 
 and the use _e.g._ as a Markdown template via RStudio, or call `rmarkdown::render()` directly.
+
+### Requirements
+
+Beyond the R package dependencies a working `pandoc` binary is needed. RStudio installs
+its own copy, otherwise do what is needed on your OS (_i.e._ something like `sudo apt-get
+install pandoc pandoc-citeproc`).
+
+The pdf mode requires a fairly complete LaTeX installation.  On Debian/Ubuntu, the
+following packages should provide working set:
+
+```
+texlive-base
+texlive-binaries
+texlive-fonts-extra
+texlive-fonts-recommended
+texlive-generic-recommended
+texlive-humanities
+texlive-latex-base
+texlive-latex-extra
+texlive-latex-recommended
+texlive-pictures
+```
 
 ### Author
 
