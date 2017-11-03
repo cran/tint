@@ -8,13 +8,14 @@ The (html and pdf) styles provided by the [tufte](https://cran.r-project.org/pac
 make it very easy and convenient to create documents in the celebrated style of
 [Edward Tufte](https://www.edwardtufte.com/tufte/).
 
-The clear layout, focused use of white space and unparallel use of the margin for complementary
-information, including graphs, offer a novel and very valuable resource for typsetting.
+The clear layout, focused use of white space and unparalleled use of the margin for complementary
+information, including graphs, offer a novel and very valuable resource for typesetting.
 
 Yet at the same time, not everybody is a fan of the yellow tint, and the fonts.  I had been looking
 for a while for an alternative, and somewhat recently came across
 [envisioned css](https://github.com/nogginfuel/envisioned-css) by Jef Lippiat.  It gets a few things
-very right: use of the beautiful [Roboto font](https://fonts.google.com/specimen/Roboto) along with
+very right: use of the beautiful 
+[Roboto Condensed font](https://fonts.google.com/specimen/Roboto+Condensed) along with
 a closer-to-white background.  So I _mixed_ this with the code framework provided by JJ and Yihui to
 make it an [RMarkdown](http://rmarkdown.rstudio.com/) template you can use just by installing this
 package. Among the small changes I made were the removal of _italics_ in subheaders and the title.
@@ -26,13 +27,24 @@ output.
 
 ### Example
 
+#### HTML
+
 A quick screenshot of the html variant is below:
 
-![](http://eddelbuettel.github.com/tint/tint-region.png)
+![](http://eddelbuettel.github.com/tint/tintHtmlScreenshot.png)
 
 and the full underlying document is [available too](http://eddelbuettel.github.com/tint/).  Its sources 
 are included in the packages as
-[skeleton.Rmd](https://github.com/eddelbuettel/tint/blob/master/inst/rmarkdown/templates/html/skeleton/skeleton.Rmd).
+[html/skeleton.Rmd](https://github.com/eddelbuettel/tint/blob/master/inst/rmarkdown/templates/html/skeleton/skeleton.Rmd).
+
+#### PDF
+
+Another screenshot shows the pdf variant:
+
+![](http://eddelbuettel.github.com/tint/tintPdfScreenshot.png)
+
+and its underlying sources are included as 
+[pdf/skeleton.Rmd](https://github.com/eddelbuettel/tint/blob/master/inst/rmarkdown/templates/html/skeleton/skeleton.Rmd).
 
 ### Status
 
@@ -41,22 +53,22 @@ supports both pdf and html output.
 
 ### Usage 
 
-Install from [CRAN](https://cran.r-project.org) as any other package, e.g. via
+Install from [CRAN](https://cran.r-project.org) as any other package via
 
 ```r
 R> install.packages("tint")
 ```
 
-and the use _e.g._ as a Markdown template via RStudio, or call `rmarkdown::render()` directly.
+and then use as a Markdown template via RStudio, or call `rmarkdown::render()` directly.
 
 ### Requirements
 
-Beyond the R package dependencies a working `pandoc` binary is needed. RStudio installs
-its own copy, otherwise do what is needed on your OS (_i.e._ something like `sudo apt-get
+Beyond the R package dependencies, a working `pandoc` binary is needed. RStudio installs
+its own copy, otherwise do what is needed on your OS (_i.e._, something like `sudo apt-get
 install pandoc pandoc-citeproc`).
 
 The pdf mode requires a fairly complete LaTeX installation.  On Debian/Ubuntu, the
-following packages should provide working set:
+following packages should provide a working set:
 
 ```
 texlive-base
@@ -76,7 +88,7 @@ texlive-pictures
 Dirk Eddelbuettel, borrowing heavily from JJ and Yihui in
 [tufte](https://cran.r-project.org/package=tufte), Dave Liepman in the underlying
 [tufte-css](https://github.com/edwardtufte/tufte-css), Jef Lippiat in
-[envisioned css](https://github.com/nogginfuel/envisioned-css) and also elying on the work
+[envisioned css](https://github.com/nogginfuel/envisioned-css) and also relying on the work
 of the [Tufte-LaTeX](https://tufte-latex.github.io/tufte-latex/) authors.
 
 ### License
