@@ -16,12 +16,11 @@ mtcars2$am <- factor(
   mtcars$am, labels = c('automatic', 'manual')
 )
 ggplot(mtcars2, aes(hp, mpg, color = am)) +
-  geom_point() + geom_smooth() +
+  geom_point() + geom_smooth(method="loess", span=0.8) +
   theme(legend.position = 'bottom')
 
 ## ----fig-fullwidth, fig.width = 10, fig.height = 2, fig.fullwidth = TRUE, fig.cap = "A full width figure.", warning=FALSE, cache=TRUE----
-ggplot(diamonds, aes(carat, price)) + geom_smooth() +
-  facet_grid(~ cut)
+ggplot(diamonds, aes(carat, price)) + geom_point(size=0.5, alpha=0.1) + facet_grid(~ cut)
 
 ## ----fig-main, fig.cap = "A figure in the main column.", cache=TRUE----
 ggplot(diamonds, aes(cut, price)) + geom_boxplot()
@@ -38,17 +37,17 @@ knitr::kable(
 p <- ggplot(mtcars2, aes(hp, mpg, color = am)) +
   geom_point()
 p
-p + geom_smooth()
+p + geom_smooth(method="loess", span=0.8)
 
 ## ----fig-two-separate, ref.label='fig-two-together', fig.cap=sprintf("Two plots in separate figure environments (the %s plot).", c("first", "second")), cache=TRUE----
 p <- ggplot(mtcars2, aes(hp, mpg, color = am)) +
   geom_point()
 p
-p + geom_smooth()
+p + geom_smooth(method="loess", span=0.8)
 
 ## ----fig-margin-together, fig.margin=TRUE, fig.show='hold', fig.cap="Two plots in one figure environment in the margin.", fig.width=3.5, fig.height=2.5, cache=TRUE----
 p
-p + geom_smooth(method = 'lm')
+p + geom_smooth(method = 'loess', span=0.8)
 
 ## ----fig-margin-separate, fig.margin=TRUE, fig.cap=sprintf("Two plots in separate figure environments in the margin (the %s plot).", c("first", "second")), fig.width=3.5, fig.height=2.5, cache=TRUE----
 knitr::kable(head(iris, 15))
@@ -70,7 +69,7 @@ p
 
 ## ----fig-nocap-fullwidth, fig.fullwidth=TRUE, fig.width=10, fig.height=3, cache=TRUE----
 # a fullwidth figure
-p + geom_smooth(method = 'lm') + facet_grid(~ gear)
+p + geom_smooth(method = 'loess', span=0.8) + facet_grid(~ gear)
 
 ## ----eval=FALSE----------------------------
 #  file.edit(
