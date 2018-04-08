@@ -14,7 +14,8 @@
 #'   \url{https://edwardtufte.github.io/tufte-css/} with fonts set according to
 #' \url{http://nogginfuel.com/envisioned-css/}. \code{tintPdf} provides a similar
 #' PDF format using the same font family and styling applied to the
-#' Tufte-LaTeX \url{https://tufte-latex.github.io/tufte-latex/} class.
+#' Tufte-LaTeX \url{https://tufte-latex.github.io/tufte-latex/} class. \code{tintBook}
+#' is a (currently rather experimental) pdf book variant.
 tintHtml <- function(...) {
 
   html_document2 = function(..., extra_dependencies = list()) {
@@ -164,7 +165,7 @@ tint_html_dependency = function() {
     ## tufte-css', '2015.12.29',
     'tint-css', '2015.12.29',
     ## src = template_resources('tufte_html'), stylesheet = 'tufte.css'
-    src = template_resources("html"), stylesheet = "tint.css"
+    src = template_resources("tintHtml"), stylesheet = "tint.css"
   ))
 }
 
