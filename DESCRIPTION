@@ -1,9 +1,9 @@
 Package: tint
 Type: Package
 Title: 'tint' is not 'Tufte'
-Version: 0.1.0
-Date: 2018-04-08
-Author: Dirk Eddelbuettel
+Version: 0.1.1
+Date: 2019-03-30
+Author: Dirk Eddelbuettel and Jonathan Gilligan
 Maintainer: Dirk Eddelbuettel <edd@debian.org>
 Description: A 'tufte'-alike style for 'rmarkdown'.
 URL: http://dirk.eddelbuettel.com/code/tint.html
@@ -12,8 +12,9 @@ Imports: htmltools, knitr, rmarkdown
 Suggests: ggplot2
 VignetteBuilder: knitr
 License: GPL-3
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1
+Encoding: UTF-8
 NeedsCompilation: no
-Packaged: 2018-04-08 14:31:35.060412 UTC; edd
+Packaged: 2019-03-30 13:13:08.712731 UTC; edd
 Repository: CRAN
-Date/Publication: 2018-04-08 14:49:04 UTC
+Date/Publication: 2019-04-01 18:40:04 UTC

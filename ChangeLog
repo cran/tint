@@ -1,3 +1,48 @@
+2019-03-30  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/examples/tintPDFGaramond.Rmd: Added example
+	* inst/examples/tintPDFGaramond.pdf: Idem
+	* inst/examples/tintPDFLato.Rmd: Idem
+	* inst/examples/tintPDFLato.pdf: Idem
+
+2019-03-29  Dirk Eddelbuettel  <edd@debian.org>
+
+	* README.md: Add dependency badge
+	
+2018-11-24  Jonathan Gilligan  <jonathan.gilligan@gmail.com>
+
+	* R/html.R: Fixed obsolete URL
+	* inst/examples/simpleHtml.Rmd: Idem
+	* inst/examples/simplePdf.Rmd: Idem
+	* inst/rmarkdown/templates/tintBook/skeleton/skeleton.Rmd: Idem
+	* inst/rmarkdown/templates/tintHtml/skeleton/skeleton.Rmd: Idem
+	* inst/rmarkdown/templates/tintPdf/skeleton/skeleton.Rmd: Idem
+	* man/tintHtml.Rd: Idem
+	* vignettes/tintHtml.Rmd: Idem
+	* vignettes/tintPdf.Rmd: Item
+	
+2018-11-22  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION: Addded new co-author, rolled version and date
+
+	* README.md: Added two more screenshots with font choices
+
+	* inst/NEWS.Rd: Updated
+
+2018-11-21  Jonathan Gilligan  <jonathan.gilligan@gmail.com>
+
+	* R/pdf.R: Allow user-specified LaTeX templates in YAML; corrected
+        YAML output option latex_engine work correctly; added documentation
+	* R/html.R: Updated documentation for tint* functions.
+	* inst/rmarkdown/templates/tintPdf/resources/tintBook-template.tex:
+	Updated template to allow user-specified fonts and link color.
+	* inst/rmarkdown/templates/tintBook/resources/tintBook-template.tex:
+	Idem
+
+	* man/Custom-templates.Rd: New documentation for using custom templates.
+	* man/YAML-metadata.Rd: New documentation on new YAML style options.
+	* man/tintHtml.Rd: Updated documentation on tint* functions.
+
 2018-04-08  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Release 0.1.0
