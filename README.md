@@ -1,4 +1,4 @@
-## tint [![Build Status](https://travis-ci.org/eddelbuettel/tint.svg)](https://travis-ci.org/eddelbuettel/tint) [![Package-License](http://img.shields.io/badge/license-GPL--3-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-3.0.html) [![CRAN](http://www.r-pkg.org/badges/version/tint)](https://cran.r-project.org/package=tint) [![Dependencies](https://tinyverse.netlify.com/badge/tint)](https://cran.r-project.org/package=tint) [![Downloads](http://cranlogs.r-pkg.org/badges/tint?color=brightgreen)](http://www.r-pkg.org/pkg/tint)
+## tint [![Build Status](https://travis-ci.org/eddelbuettel/tint.svg)](https://travis-ci.org/eddelbuettel/tint) [![Package-License](http://img.shields.io/badge/license-GPL--3-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-3.0.html) [![CRAN](https://www.r-pkg.org/badges/version/tint)](https://cran.r-project.org/package=tint) [![Dependencies](https://tinyverse.netlify.com/badge/tint)](https://cran.r-project.org/package=tint) [![Downloads](http://cranlogs.r-pkg.org/badges/tint?color=brightgreen)](http://www.r-pkg.org/pkg/tint)
 
 Tint is not Tufte
 
@@ -21,7 +21,7 @@ make it an [RMarkdown](http://rmarkdown.rstudio.com/) template you can use just 
 package. Among the small changes I made were the removal of _italics_ in subheaders and the title.
 
 Similarly, LaTeX styles exists and the
-[tufte](https://cran.r-project.org/package=tufte) supports both pdf
+[tufte](https://cran.r-project.org/package=tufte) package supports both pdf
 handouts and a book format.  We first supported the pdf handout
 output only, and added support for a pdf book format in release 0.1.0.
 
@@ -53,7 +53,7 @@ Here is a screenshot of the book format (which was added with release 0.1.0), sh
 
 #### PDF Font Variants
 
-Since release 0.2.0 additional fonts can be specified in the YAML header.  Using the following lines
+Since release 0.1.1 additional fonts can be specified in the YAML header.  Using the following lines
 in the YAML header 
 
 ```yaml

@@ -1,4 +1,74 @@
+2019-04-19  Dirk Eddelbuettel  <edd@debian.org>
+
+	* R/pdf.R (tintPdfCreate): Revert remaining 'tidy' chunk option to
+	FALSE to not have a spurious dependency on the formatR package
+
+	* vignettes/tintHtmlIntro.Rmd: Refined download of two png images used
+	for two margin figure to better cope with the delight that is Windows
+	* vignettes/tintPdfIntro.Rmd: Idem, but also turn download off if on
+	Windows and we could get this work for pdf vignettes on win-builder
+
+2019-04-18  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Roll minor version
+
+	* vignettes/tintHtmlIntro.Rmd (author): Updated to use package
+	version of theme_tint and check for connectedness
+	* vignettes/tintPdfIntro.Rmd: Idem
+
+	* R/theme.R (theme_tint): Now conditional on ggplot2 installed
+
+	* R/pdf.R: Added copyright header, small edits to roxygen docs
+	* R/html.R: Idem
+
+	* man/tintHtml.Rd: Updated
+	* man/Custom-templates.Rd: Idem
+	* man/YAML-metadata.Rd: Idem
+
+	* R/utils.R: Marked sans_serif() via .Deprecated() as a candidate
+	for removal.
+
+2019-04-17  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Description): Expanded Description
+
+	* R/isConnected.R (.isConnected): New helper function (to check network
+	access) borrowed from our dang package
+
+	* R/theme.R (theme_tint): New helper function for 'theme_tint' based
+	a similar function in 'ggtufte' by Jeffrey Arnold
+	* man/theme_tint.Rd: Documentation
+
+	* R/utils.R: More explicit copyright header
+	* R/utilsKnitr.R: Idem
+
+	* README.md: Minor edit
+
+2019-04-14  Dirk Eddelbuettel  <edd@debian.org>
+
+	* vignettes/tintHtmlIntro.Rmd: New shorter vignette
+
+	* cleanup: Added
+
+2019-04-13  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Roll minor version
+
+	* vignettes/tintPdfIntro.Rmd: New shorter vignette
+
+	* inst/examples/tintPDF.Rmd: Moved from vignettes/
+	* inst/examples/tintHTML.Rmd: Idem
+
+	* tests/simple.R: Pause local pdf test
+
+2019-04-09  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/rmarkdown/templates/tintPdf/resources/tintPdf-template.tex:
+	Rounded parenthesis as default citation style (as we do in tintBook)
+
 2019-03-30  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Release 0.1.1
 
 	* inst/examples/tintPDFGaramond.Rmd: Added example
 	* inst/examples/tintPDFGaramond.pdf: Idem
@@ -8,7 +78,7 @@
 2019-03-29  Dirk Eddelbuettel  <edd@debian.org>
 
 	* README.md: Add dependency badge
-	
+
 2018-11-24  Jonathan Gilligan  <jonathan.gilligan@gmail.com>
 
 	* R/html.R: Fixed obsolete URL
@@ -20,7 +90,7 @@
 	* man/tintHtml.Rd: Idem
 	* vignettes/tintHtml.Rmd: Idem
 	* vignettes/tintPdf.Rmd: Item
-	
+
 2018-11-22  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION: Addded new co-author, rolled version and date
