@@ -1,6 +1,11 @@
-## tint [![Build Status](https://travis-ci.org/eddelbuettel/tint.svg)](https://travis-ci.org/eddelbuettel/tint) [![Package-License](http://img.shields.io/badge/license-GPL--3-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-3.0.html) [![CRAN](https://www.r-pkg.org/badges/version/tint)](https://cran.r-project.org/package=tint) [![Dependencies](https://tinyverse.netlify.com/badge/tint)](https://cran.r-project.org/package=tint) [![Downloads](http://cranlogs.r-pkg.org/badges/tint?color=brightgreen)](http://www.r-pkg.org/pkg/tint)
+## tint: Tint is not Tufte
 
-Tint is not Tufte
+[![Build Status](https://travis-ci.org/eddelbuettel/tint.svg)](https://travis-ci.org/eddelbuettel/tint) 
+[![Package-License](http://img.shields.io/badge/license-GPL--3-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-3.0.html) 
+[![CRAN](https://www.r-pkg.org/badges/version/tint)](https://cran.r-project.org/package=tint) 
+[![Dependencies](https://tinyverse.netlify.com/badge/tint)](https://cran.r-project.org/package=tint) 
+[![Downloads](http://cranlogs.r-pkg.org/badges/tint?color=brightgreen)](http://www.r-pkg.org/pkg/tint)
+[![Last Commit](https://img.shields.io/github/last-commit/eddelbuettel/tint)](https://github.com/eddelbuettel/tint)
 
 ### Motivation
 
@@ -125,7 +130,16 @@ texlive-latex-recommended
 texlive-pictures
 ```
 
-### Author
+### See Also
+
+- [binb](https://github.com/eddelbuettel/binb): Binb is not Beamer: Stylish pdf Presentations from RMarkdown
+- [linl](https://github.com/eddelbuettel/linl): Linl is not Letter: LaTeX letters from RMarkdown
+- [pinp](https://github.com/eddelbuettel/pinp): Pinp is not PNAS: Snazzy one-or two column short papers or vignettes 
+
+and the [minm](https://github.com/eddelbuettel/minm) package installing all of them.
+
+
+### Authors
 
 Dirk Eddelbuettel and Jonathan Gilligan, borrowing heavily from JJ and Yihui in
 [tufte](https://cran.r-project.org/package=tufte), Dave Liepman in the underlying

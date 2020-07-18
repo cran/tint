@@ -1,4 +1,4 @@
-## ----setup, include=FALSE------------------------------------------------
+## ----setup, include=FALSE-----------------------------------------------------
 library(tint)
 library(ggplot2)
 mtcars$am <- factor(mtcars$am, labels=c("manual", "automatic"))
@@ -34,9 +34,9 @@ ggplot(mtcars, aes(wt, mpg)) +
     geom_point(size=2, aes(colour=factor(cyl))) +
     theme_tint() + theme(legend.position="none")
 
-## ----fig-lato-screenshot, fig.margin=TRUE, cache=TRUE, echo=FALSE--------
+## ----fig-lato-screenshot, fig.margin=TRUE, cache=TRUE, echo=FALSE-------------
 if (connected) knitr::include_graphics(latofile, dpi = NA)
 
-## ----fig-garamond-screenshot, fig.margin=TRUE, cache=TRUE, echo=FALSE----
+## ----fig-garamond-screenshot, fig.margin=TRUE, cache=TRUE, echo=FALSE---------
 if (connected) knitr::include_graphics(garamondfile, dpi = NA)
 

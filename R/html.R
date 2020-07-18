@@ -46,6 +46,7 @@ tintHtml <- function(...) {
     )
   }
   format = html_document2(theme = NULL, ...)
+  pandoc2 = pandoc2.0()
 
   # when fig.margin = TRUE, set fig.beforecode = TRUE so plots are moved before
   # code blocks, and they can be top-aligned
@@ -64,13 +65,14 @@ tintHtml <- function(...) {
     knitr::opts_hooks$restore(ohooks)
 
     x = readUTF8(output)
-    footnotes = parse_footnotes(x)
+    fn_label = paste0(knitr::opts_knit$get('rmarkdown.pandoc.id_prefix'), 'fn')
+    footnotes = parse_footnotes(x, fn_label)
     notes = footnotes$items
     # replace footnotes with sidenotes
     for (i in seq_along(notes)) {
       num = sprintf(
-        '<a href="#fn%d" class="footnoteRef" id="fnref%d"><sup>%d</sup></a>',
-        i, i, i
+        '<a href="#%s%d" class="%s" id="%sref%d"><sup>%d</sup></a>',
+        fn_label, i, if (pandoc2) 'footnote-ref' else 'footnoteRef', fn_label, i, i
       )
       con = sprintf(paste0(
         '<label for="tufte-sn-%d" class="margin-toggle sidenote-number">%d</label>',
@@ -192,23 +194,29 @@ tint_html_dependency = function() {
 
 # we assume one footnote only contains one paragraph here, although it is
 # possible to write multiple paragraphs in a footnote with Pandoc's Markdown
-parse_footnotes = function(x) {
+parse_footnotes = function(x, fn_label='fn') {
   i = which(x == '<div class="footnotes">')
   if (length(i) == 0) return(list(items = character(), range = integer()))
   j = which(x == '</div>')
   j = min(j[j > i])
   n = length(x)
-  r = '<li id="fn([0-9]+)"><p>(.+)<a href="#fnref\\1">.</a></p></li>'
+  r = sprintf(
+    '<li id="%s([0-9]+)"><p>(.+)<a href="#%sref\\1"([^>]*)>.{1,2}</a></p></li>',
+    fn_label, fn_label
+  )
+  s = paste(x[i:j], collapse = '\n')
   list(
-    items = gsub(r, '\\2', grep(r, x[i:n], value = TRUE)),
+    items = gsub(r, '\\2', unlist(regmatches(s, gregexpr(r, s)))),
     range = i:j
   )
 }
 
 # move reference items from the bottom to the margin (as margin notes)
 margin_references = function(x) {
-  i = which(x == '<div id="refs" class="references">')
+  i = grep('^<div id="refs" class="references[^"]*">$', x)
   if (length(i) != 1) return(x)
+  # link-citations: no
+  if (length(grep('<a href="#ref-[^"]+"[^>]*>([^<]+)</a>', x)) == 0) return(x)
   r = '^<div id="(ref-[^"]+)">$'
   k = grep(r, x)
   k = k[k > i]
@@ -217,9 +225,9 @@ margin_references = function(x) {
   # pandoc-citeproc may generate a link on both the year and the alphabetic
   # suffix, e.g. <a href="#cite-key">2016</a><a href="#cite-key">a</a>; we need
   # to merge the two links
-  x = gsub('(<a href="#[^"]+">)([^<]+)</a>\\1([^<]+)</a>', '\\1\\2\\3</a>', x)
+  x = gsub('(<a href="#[^"]+"[^>]*>)([^<]+)</a>\\1([^<]+)</a>', '\\1\\2\\3</a>', x)
   ids = gsub(r, '\\1', x[k])
-  ids = sprintf('<a href="#%s">([^<]+)</a>', ids)
+  ids = sprintf('<a href="#%s"[^>]*>([^<]+)</a>', ids)
   ref = gsub('^<p>|</p>$', '', x[k + 1])
   # replace 3 em-dashes with author names
   dashes = paste0('^', intToUtf8(rep(8212, 3)), '[.]')
