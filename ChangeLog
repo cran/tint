@@ -1,3 +1,54 @@
+2022-11-01  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Release 0.1.4
+
+	* .github/workflows/ci.yaml (jobs): Update to actions/checkout@v3
+
+	* tests/simple.R: Condition test on sufficient pandoc version
+
+	* README.md: Update several http:// URLs to https://
+	* vignettes/tintHtmlIntro.Rmd (vignette): Idem
+	* vignettes/tintPdfIntro.Rmd (vignette): Idem
+	* man/tintHtml.Rd: Idem
+
+2022-01-09  Dirk Eddelbuettel  <edd@debian.org>
+
+	* README.md: Remove unused continuous integration artifact and badge
+
+2021-09-19  Dirk Eddelbuettel  <edd@debian.org>
+
+	* README.md: Add link to sidenotes overview
+
+2021-06-02  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (URL): Add repo to URL
+
+2021-02-21  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Roll minor version
+
+	* inst/rmarkdown/templates/tintPdf/resources/tintPdf-template.tex:
+	Install package 'array' when tables are used
+
+2021-02-07  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/rmarkdown/templates/tintHtml/resources/tint.css:
+	Further tweaking of values for improved references
+
+2021-02-05  David Selby  <qurk.kinschien@gmail.com>
+
+	* inst/rmarkdown/templates/tintHtml/resources/tint.css:
+	Improve styling for explicit (non-margin) references
+
+2021-01-21  Dirk Eddelbuettel  <edd@debian.org>
+
+        * .github/workflows/ci.yaml: Add CI runner using r-ci
+	* README.md: Add new badge
+
+2020-11-01  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Roll minor version
+
 2020-07-18  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Release 0.1.3
