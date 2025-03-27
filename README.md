@@ -3,7 +3,7 @@
 [![CI](https://github.com/eddelbuettel/tint/workflows/ci/badge.svg)](https://github.com/eddelbuettel/tint/actions?query=workflow%3Aci)
 [![Package-License](https://img.shields.io/badge/license-GPL--3-brightgreen.svg?style=flat)](https://www.gnu.org/licenses/gpl-3.0.html) 
 [![CRAN](https://www.r-pkg.org/badges/version/tint)](https://cran.r-project.org/package=tint) 
-[![Dependencies](https://tinyverse.netlify.com/badge/tint)](https://cran.r-project.org/package=tint) 
+[![Dependencies](https://tinyverse.netlify.app/badge/tint)](https://cran.r-project.org/package=tint) 
 [![Downloads](https://cranlogs.r-pkg.org/badges/tint?color=brightgreen)](https://www.r-pkg.org/pkg/tint)
 [![Last Commit](https://img.shields.io/github/last-commit/eddelbuettel/tint)](https://github.com/eddelbuettel/tint)
 
@@ -11,7 +11,7 @@
 
 The (html and pdf) styles provided by the [tufte](https://cran.r-project.org/package=tufte) package
 make it very easy and convenient to create documents in the celebrated style of
-[Edward Tufte](https://www.edwardtufte.com/tufte/).
+[Edward Tufte](https://www.edwardtufte.com/).
 
 The clear layout, focused use of white space and unparalleled use of the margin for complementary
 information, including graphs, offer a novel and very valuable resource for typesetting.
@@ -142,7 +142,7 @@ and the [minm](https://github.com/eddelbuettel/minm) package installing all of t
 
 #### Sidenotes
 
-[Gwern Branwen](https://www.gwern.net/index) has a wide-ranging overview of [sidenotes in web design](https://www.gwern.net/Sidenotes).
+[Gwern Branwen](https://gwern.net/sidenote) has a wide-ranging overview of [sidenotes in web design](https://gwern.net/sidenote).
 
 ### Authors
 
